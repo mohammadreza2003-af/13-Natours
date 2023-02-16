@@ -1,0 +1,147 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: #777;
+  padding: 30px;
+}
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #7ed56fa6, #55c57ab9),
+    url(../img/hero.jpg);
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.logo-box {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+.logo {
+  height: 35px;
+}
+.text-box {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+}
+.heading-primary-main {
+  font-size: 60px;
+  font-weight: 400;
+  display: block;
+  letter-spacing: 35px;
+  animation: moveinright 1s ease-out;
+}
+.heading-primary-sub {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17.4px;
+  display: block;
+  animation: moveinleft 1s ease-out;
+}
+/* Anim */
+@keyframes moveinright {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes moveinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes moveinbottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+.btn-animated {
+  animation: moveinbottom 1s ease-in-out 0.75s;
+  animation-fill-mode: backwards;
+}
+.btn:is(:link, :visited) {
+  padding: 15px 40px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  text-decoration: none;
+  color: #777;
+  display: inline-block;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-white {
+  background-color: #fff;
+}
+.btn:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+.btn:active {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 100px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn-white:hover::after {
+  background-color: #fff;
+}
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.4) scaleY(1.6);
+}
