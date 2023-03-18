@@ -16,6 +16,13 @@
   --Light-green: #7ed56f;
   --Medium-green: #55c57a;
   --Dark-green: #28b485;
+  --white: #fff;
+  --background-color: #f7f7f7;
+
+  /* margin */
+  --margin-small: 1.5rem;
+  --margin-medim: 3rem;
+  --margin-big: 7.2rem;
 }
 html {
   font-size: 62.5%;
@@ -28,6 +35,7 @@ body {
   color: #777;
   padding: 3rem;
   box-sizing: border-box;
+  background-color: var(--white);
 }
 .header {
   height: 95vh;
@@ -37,6 +45,7 @@ body {
   background-size: cover;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  background-color: var(--background-color);
 }
 .header__logo-box {
   position: absolute;
@@ -158,8 +167,11 @@ body {
 }
 /*  setion-about  */
 .section-about {
-  padding: 25rem 0;
+  max-width: 130rem;
+  padding: 25rem 6.4rem;
+  margin: 0 auto;
   margin-top: -20vh;
+  background-color: var(--background-color);
 }
 .center-head-text {
   text-align: center;
@@ -176,8 +188,78 @@ body {
   color: transparent;
   transition: all 0.2s ease-in-out;
   display: inline-block;
+  margin-bottom: var(--margin-big);
 }
 .heading-secondary:hover {
   transform: skewX(15deg) skewY(2deg) scale(1.1);
   text-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+}
+.grid {
+  display: grid;
+  max-width: 114rem;
+  margin-top: 0 auto;
+}
+.grid-2-c {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 314px;
+}
+.heading-tertiary {
+  margin-bottom: var(--margin-small);
+  font-size: var(--tertiary);
+  text-transform: uppercase;
+}
+.paragraph {
+  margin-bottom: var(--margin-medim);
+  font-size: var(--tertiary);
+}
+.img-com {
+  position: relative;
+  z-index: 10;
+}
+.img-com img {
+  position: absolute;
+  width: 55%;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 6px 18px 24px rgba(0, 0, 0, 0.2);
+  outline-offset: 1.6rem;
+}
+.img-1 {
+  top: 0;
+  right: -10%;
+}
+.img-2 {
+  top: 20%;
+  left: 20%;
+}
+.img-3 {
+  top: -8%;
+  left: 6%;
+}
+.img-com img:hover {
+  z-index: 20;
+  transform: scale(1.05);
+  box-shadow: 6px 18px 24px rgba(0, 0, 0, 0.5);
+  outline: 1.2rem solid var(--Dark-green);
+}
+.img-com:hover img:not(:hover) {
+  transform: scale(0.95);
+}
+.btn-text:is(:link, :visited) {
+  text-decoration: none;
+  padding: 0.6rem;
+  color: var(--Light-green);
+  border-bottom: 0.1rem solid var(--Light-green);
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  font-size: 1.6rem;
+}
+.btn-text:hover {
+  background-color: var(--Dark-green);
+  transform: translateY(-0.2rem);
+  color: var(--white);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btn-text:active {
+  box-shadow: 0 0.8rem 0.17rem rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
 }
