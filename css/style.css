@@ -1,17 +1,21 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+:root {
+  /* font-size */
+  --primary: 6rem;
+  --secondary: 3.5rem;
+  --tertiary: 1.6rem;
+
+  /* COLORS: */
+
+  --Light-green: #7ed56f;
+  --Medium-green: #55c57a;
+  --Dark-green: #28b485;
 }
 html {
   font-size: 62.5%;
@@ -153,3 +157,27 @@ body {
   transform: scaleX(1.4) scaleY(1.6);
 }
 /*  setion-about  */
+.section-about {
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
+.center-head-text {
+  text-align: center;
+}
+.heading-secondary {
+  font-size: var(--secondary);
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    var(--Light-green),
+    var(--Dark-green)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+.heading-secondary:hover {
+  transform: skewX(15deg) skewY(2deg) scale(1.1);
+  text-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+}
