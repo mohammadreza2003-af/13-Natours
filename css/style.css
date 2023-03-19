@@ -323,6 +323,7 @@ body {
   left: 0;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 .card-front {
   background-color: var(--white);
@@ -337,4 +338,49 @@ body {
 }
 .card:hover .card-back {
   transform: rotateY(0deg);
+}
+.card-picture {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-blend-mode: screen;
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730),
+    url(/img/nat-5.jpg);
+  background-position: top;
+  background-size: cover;
+  height: 23rem;
+}
+.card-heading {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 300;
+  width: 60%;
+  font-size: 2.8rem;
+}
+.card-heading-span-1 {
+  background-image: linear-gradient(to right bottom, #ffbb00c5, #ff7830c2);
+  padding: 1rem 1.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.card-details {
+  padding: 3rem;
+}
+.card-details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.card-details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.card-details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding: 1rem;
 }
