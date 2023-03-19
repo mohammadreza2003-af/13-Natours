@@ -300,14 +300,14 @@ body {
 /* section-tours */
 .section-tours {
   max-width: 130rem;
-  padding: 25rem 6.4rem;
+  padding: 25rem 9.4rem;
   margin: 0 auto;
   margin-top: -20vh;
   background-color: var(--background-color);
 }
 .card {
   height: 50rem;
-  width: 30rem;
+  width: 32rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
@@ -328,11 +328,19 @@ body {
 .card-front {
   background-color: var(--white);
 }
-
-.card-back {
+.card-back-1 {
   transform: rotateY(180deg);
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
+.card-back-2 {
+  transform: rotateY(180deg);
+  background-image: linear-gradient(to right bottom, #55c57a, #7ed56f);
+}
+.card-back-3 {
+  transform: rotateY(180deg);
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+
 .card:hover .card-front {
   transform: rotateY(-180deg);
 }
@@ -345,11 +353,22 @@ body {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   background-blend-mode: screen;
-  background-image: linear-gradient(to right bottom, #ffb900, #ff7730),
-    url(/img/nat-5.jpg);
+
   background-position: top;
   background-size: cover;
   height: 23rem;
+}
+.card-picture-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730),
+    url(/img/nat-5.jpg);
+}
+.card-picture-2 {
+  background-image: linear-gradient(to right bottom, #55c57a, #7ed56f),
+    url(/img/nat-6.jpg);
+}
+.card-picture-3 {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa),
+    url(/img/nat-7.jpg);
 }
 .card-heading {
   position: absolute;
@@ -359,11 +378,23 @@ body {
   text-transform: uppercase;
   color: var(--white);
   font-weight: 300;
-  width: 60%;
+  width: 70%;
   font-size: 2.8rem;
 }
 .card-heading-span-1 {
   background-image: linear-gradient(to right bottom, #ffbb00c5, #ff7830c2);
+  padding: 1rem 1.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.card-heading-span-2 {
+  background-image: linear-gradient(to right bottom, #55c57ab4, #7ed56fa9);
+  padding: 1rem 1.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.card-heading-span-3 {
+  background-image: linear-gradient(to right bottom, #2998ffa2, #5543fa9d);
   padding: 1rem 1.5rem;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
@@ -383,4 +414,30 @@ body {
 .card-details ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
   padding: 1rem;
+}
+.card-cta {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  color: var(--white);
+  width: 90%;
+  left: 50%;
+  text-align: center;
+}
+.price-box {
+  text-align: center;
+  margin-bottom: 8rem;
+  text-transform: uppercase;
+}
+.price-text {
+  font-size: 1.4rem;
+}
+.price-value {
+  font-size: 6rem;
+  font-weight: 100;
+}
+.grid-3-c {
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  gap: 6.4rem;
 }
