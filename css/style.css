@@ -135,8 +135,22 @@ body {
   position: relative;
   font-size: 1.6rem;
 }
+.btn--green:is(:link, :visited) {
+  padding: 1.5rem 4rem;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  text-decoration: none;
+  color: var(--white);
+  display: inline-block;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 1.6rem;
+}
 .btn--white {
   background-color: #fff;
+}
+.btn--green {
+  background-color: var(--Medium-green);
 }
 .btn:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -160,6 +174,9 @@ body {
 }
 .btn--white:hover::after {
   background-color: #fff;
+}
+.btn--green:hover::after {
+  background-color: var(--Medium-green);
 }
 .btn:hover::after {
   opacity: 0;
@@ -440,4 +457,7 @@ body {
   grid-template-columns: repeat(3, max-content);
   justify-content: center;
   gap: 6.4rem;
+}
+.margin-top {
+  margin-top: 9.6rem;
 }
