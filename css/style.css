@@ -298,3 +298,43 @@ body {
 }
 
 /* section-tours */
+.section-tours {
+  max-width: 130rem;
+  padding: 25rem 6.4rem;
+  margin: 0 auto;
+  margin-top: -20vh;
+  background-color: var(--background-color);
+}
+.card {
+  height: 50rem;
+  width: 30rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+
+.card-side {
+  backface-visibility: hidden;
+  transition: all 0.9s ease;
+  height: 50rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card-front {
+  background-color: var(--white);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
