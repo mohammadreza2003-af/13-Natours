@@ -583,6 +583,7 @@ body {
   border: none;
   border-bottom: 3px solid transparent;
   width: 90%;
+  transition: all 0.3s;
   display: block;
 }
 .form-input:focus {
@@ -595,4 +596,18 @@ body {
 }
 .form-input::-webkit-input-placeholder {
   color: #999;
+}
+.form-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+}
+
+.form-input:placeholder-shown + .form-label {
+  transform: translateY(-4rem);
+  opacity: 0;
+  visibility: hidden;
 }
