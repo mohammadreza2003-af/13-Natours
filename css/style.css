@@ -124,6 +124,7 @@ body {
   animation: moveinbottom 1s ease-in-out 0.75s;
   animation-fill-mode: backwards;
 }
+
 .btn:is(:link, :visited) {
   padding: 1.5rem 4rem;
   text-transform: uppercase;
@@ -135,6 +136,7 @@ body {
   position: relative;
   font-size: 1.6rem;
 }
+
 .btn--green:is(:link, :visited) {
   padding: 1.5rem 4rem;
   text-transform: uppercase;
@@ -192,6 +194,20 @@ body {
 }
 .center-head-text {
   text-align: center;
+}
+.heading-secondary-small {
+  margin-bottom: var(--margin-medim);
+  font-size: var(--secondary);
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    var(--Light-green),
+    var(--Dark-green)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
 }
 .heading-secondary {
   font-size: var(--secondary);
@@ -560,7 +576,7 @@ body {
   height: 50rem;
   background-image: linear-gradient(
       105deg,
-      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.9) 50%,
       transparent 50%
     ),
     url(../img/nat-10.jpg);
@@ -610,4 +626,61 @@ body {
   transform: translateY(-4rem);
   opacity: 0;
   visibility: hidden;
+}
+.form-radio-box {
+  width: 49%;
+  position: relative;
+  display: inline-block;
+}
+.radio-btn {
+  width: 3rem;
+  height: 3rem;
+  border: 5px solid var(--Medium-green);
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -10%;
+}
+.radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding-left: 4rem;
+}
+.radio-btn::after {
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: var(--Medium-green);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.radio-input:checked ~ .radio-label .radio-btn::after {
+  opacity: 1;
+}
+.radio-input {
+  display: none;
+}
+
+.btn {
+  padding: 1.5rem 4rem;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  text-decoration: none;
+  color: var(--white);
+  display: inline-block;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+}
+.margin-top-small {
+  margin-top: 2.4rem;
 }
