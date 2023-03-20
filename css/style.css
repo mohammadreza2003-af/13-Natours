@@ -543,3 +543,30 @@ body {
   object-fit: cover;
   height: 100%;
 }
+/* section-book */
+.section-book {
+  padding: 15rem 0;
+  max-width: 130rem;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--Light-green),
+    var(--Dark-green)
+  );
+}
+
+.book {
+  margin: 0 auto;
+  max-width: 114rem;
+  height: 50rem;
+  background-image: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.8) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  background-size: 100%;
+}
+.book-form {
+  padding: 6rem;
+  width: 50%;
+}
