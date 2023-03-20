@@ -570,3 +570,29 @@ body {
   padding: 6rem;
   width: 50%;
 }
+.form-box:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form-input {
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+}
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid var(--Dark-green);
+}
+.form-input:focus:invalid {
+  border-bottom: 3px solid orangered;
+}
+.form-input::-webkit-input-placeholder {
+  color: #999;
+}
