@@ -39,7 +39,7 @@ body {
 }
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, #7ed56fa6, #55c57ab9),
+  background-image: linear-gradient(to right bottom, #7ed56fa6, #128f3cea),
     url(../img/hero.jpg);
   background-position: top;
   background-size: cover;
