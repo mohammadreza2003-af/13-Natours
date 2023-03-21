@@ -863,3 +863,50 @@ body {
   transform: rotate(135deg);
   top: 0;
 }
+/* Popup */
+.popup {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.popup-content {
+  width: 85%;
+  height: 50rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  display: table;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.popup-img {
+  width: 100%;
+  display: block;
+}
+.popup-left {
+  display: table-cell;
+  width: 33.333333%;
+}
+.popup-right {
+  padding: 3rem 5rem;
+  vertical-align: middle;
+  display: table-cell;
+  width: 66.666667%;
+}
+.popup-text {
+  font-size: 1.4rem;
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 1px solid #333;
+  margin-bottom: 2rem;
+}
+#heading-secondary {
+  margin-bottom: 3rem;
+}
